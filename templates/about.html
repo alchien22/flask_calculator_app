@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='calculator.css') }}"/>
+</head>
+<body>
+    <center>
+        <h1>About This Calculator</h1>
+        <img src="static/images/abacus.jpg" alt="abacus"/>
+        <p class="about">
+            This is a calculator built using flask able to perform the following operations on two operands:
+        </p>
+        <h3 class="about">&#x2022; Addition</h3>
+        <h3 class="about">&#x2022; Subtraction</h3>
+        <h3 class="about">&#x2022; Division</h3>
+        <h3 class="about">&#x2022; Multiplication</h3>
+        <h3 class="about">&#x2022; Modulus</h3>
+        <h3 class="about">&#x2022; Exponentiation</h3>
+
+    <a class="about" href="{{url_for('index')}}">Back to Calculator</a>
+    </center>
+</body>
+</html>
+
+<!--move file: mv -i Desktop/abacus.jpg ~/Documents/GitHub/flask_calculator_app/static/images-->

@@ -1,12 +1,18 @@
 from flask import Flask, render_template, request
+import numpy as np
 
 Flask_App = Flask(__name__) # Creating our Flask Instance
 
+#get method doesn't change state of page
 @Flask_App.route('/', methods=['GET'])
 def index():
     """ Displays the index page accessible at '/' """
 
     return render_template('index.html')
+
+@Flask_App.route('/about')
+def about():
+    return render_template('about.html')
 
 @Flask_App.route('/operation_result/', methods=['POST'])
 def operation_result():
@@ -22,6 +28,7 @@ def operation_result():
     operation = request.form['operation']
 
     try:
+        #must convert since seen as strings
         input1 = float(first_input)
         input2 = float(second_input)
 
@@ -37,6 +44,9 @@ def operation_result():
 
         elif operation == "*":
             result = input1 * input2
+
+        elif operation == "^":
+            result = np.power(input1, input2)
 
         else:
             operation = "%"

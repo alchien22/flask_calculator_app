@@ -1,0 +1,14 @@
+h1{
+    font-size: 4rem;
+    font-family:fantasy;
+}
+
+label, p, input, option, select{
+    font-size:large;
+    font-family:'Franklin Gothic Medium';
+}
+
+.about{
+    font-size:1rem;
+    font-family: Verdana;
+}
